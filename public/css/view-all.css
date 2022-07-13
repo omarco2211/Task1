@@ -1,0 +1,56 @@
+body{
+  background-color: #141717;
+  position: relative;
+}
+
+.logo {
+  font-family: 'Marcellus SC', serif;
+  font-size: 1rem;
+  letter-spacing: 0.70rem;
+  color: #F0F0F0;
+  margin-left: 2rem;
+  margin-top: 2rem;
+}
+.hidden{
+  visibility: hidden;
+}
+.card-title{
+  font-family: 'Literata', serif;
+  font-size: 1rem;
+  letter-spacing: 0.4rem;
+  color: white;
+  margin: 1rem;
+  margin: auto;
+}
+
+.container{
+  /* background-color: green; */
+  margin: 10rem auto;
+
+}
+.row {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.card {
+  background-color: #474747;
+  border-radius: 3rem;
+  text-align: center;
+  width: 20rem;
+  height: 5.5rem;
+  margin: 1rem;
+  border-width: 5px;
+  border-color: #141717;
+  cursor: pointer;
+}
+
+
+
+@media (max-width:770px){
+  .card{
+    margin: 1rem auto;
+  }
+
+}
