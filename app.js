@@ -69,6 +69,12 @@ app.route("/view-all")
                     } else {
                         conn.query('update client set balance = ? where accountid = ?', [new_amnt, req.body.id]);
                         conn.query('update client set balance = balance+? where accountid = ?', [req.body.amount, req.body.transferid]);
+                        const params = {
+                          sourceid: req.body.id,
+                          sinkid: req.body.transferid,
+                          amount: req.body.amount
+                        };
+                        conn.query('Insert into transfers set ?', params);
                         conn.release();
                         req.body.balance = new_amnt;
                         res.status(200).json({
