@@ -1,6 +1,7 @@
 // Fetch all the forms we want to apply custom Bootstrap validation styles to
 const form = document.querySelector('.needs-validation')
 const cards = document.querySelectorAll(".card");
+const modal = bootstrap.Modal.getOrCreateInstance(document.getElementById('modallaunch'));
 cards.forEach((card, i) => {
     card.addEventListener("click", (event) => {
         event.preventDefault();
@@ -21,6 +22,7 @@ cards.forEach((card, i) => {
                 document.querySelector("#staticAcc").value = data.accountid;
                 document.querySelector("#staticBal").value = data.balance;
             }
+            modal.show();
         }
     });
 
