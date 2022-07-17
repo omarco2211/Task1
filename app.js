@@ -29,6 +29,19 @@ app.get("/", (req, res) => {
 });
 
 
+app.get("/transfers", (req, res)=>{
+  pool.getConnection((err, conn)=>{
+    if(err) throw err;
+    conn.query("Select * from transfers", (err, rows)=>{
+      conn.release();
+      if(err) throw err;
+      console.log(rows);
+      res.render("transfers", {rows: rows});
+    });
+  });
+});
+
+
 app.route("/view-all")
     .get((req, res) => {
         pool.getConnection((err, conn) => {

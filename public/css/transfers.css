@@ -1,0 +1,20 @@
+body{
+  background-color: #141717;
+  position: relative;
+}
+
+#logo {
+  font-family: 'Marcellus SC', serif;
+  font-size: 1rem;
+  letter-spacing: 0.70rem;
+  color: #F0F0F0;
+  margin-left: 2rem;
+  margin-top: 2rem;
+}
+
+.table-div{
+  margin-top: 8rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}

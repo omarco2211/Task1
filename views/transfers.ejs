@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lexend:wght@700&family=Literata:wght@700&family=Marcellus+SC&display=swap" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js" integrity="sha384-pprn3073KE6tl6bjs2QrFaJGz5/SUsLqktiwsUTF55Jfv3qYSDhgCecCxMW52nD2" crossorigin="anonymous"></script>
+    <title>Banking System</title>
+    <link rel="stylesheet" href="css/transfers.css">
+  </head>
+  <body>
+    <div class="navbar">
+      <div class="container-fluid">
+        <a class="navbar-brand" id="logo" href="/">Banking System</a>
+      </div>
+    </div>
+    <div class="table-div table-responsive">
+      <table style="width: 70%"class="table table-dark table-striped">
+        <thead>
+          <tr>
+            <th scope="col">From</th>
+            <th scope="col">To</th>
+            <th scope="col">Amount</th>
+          </tr>
+        </thead>
+        <tbody>
+          <%rows.forEach((row, i)=>{%>
+            <tr>
+                <td style="width: 30%"><%=row.sourceid%></td>
+                <td style="width: 30%"><%=row.sinkid%></td>
+                <td style="width: 20%"><%=row.amount%></td>
+            </tr>
+
+          <%})%>
+        </tbody>
+
+      </table>
+    </div>
+
+  </body>
+</html>

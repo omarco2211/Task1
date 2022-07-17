@@ -3,13 +3,13 @@ body{
   position: relative;
 }
 
-.logo {
+#logo {
   font-family: 'Marcellus SC', serif;
   font-size: 1rem;
   letter-spacing: 0.70rem;
   color: #F0F0F0;
   margin-left: 2rem;
-  margin-top: 2rem;
+  /* margin-top: 2rem; */
 }
 .hidden{
   visibility: hidden;
@@ -21,6 +21,13 @@ body{
   color: white;
   margin: 1rem;
   margin: auto;
+}
+.navitem{
+  font-family: 'Literata', serif;
+  font-size: 1rem;
+  letter-spacing: 0.2rem;
+  color: white;
+  margin: 1rem;
 }
 
 .container{
@@ -46,11 +53,13 @@ body{
   cursor: pointer;
 }
 
-
-
 @media (max-width:770px){
   .card{
     margin: 1rem auto;
   }
 
+}
+
+.navitem:hover{
+  color: #474747;
 }
